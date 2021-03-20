@@ -1,36 +1,57 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="reset-csss" href=https://meyerweb.com/eric/tools/css/reset/reset.css> 
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- CSS Links -->
+    <link rel="reset-csss" href=https://meyerweb.com/eric/tools/css/reset/reset.css> <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="shortcut icon" href="Assets/images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="Assets/css/style.css"
-</head>
-
-<body>
+    <link rel="stylesheet" href="Assets/css/style.css" </head> <body>
     <header class="header">
         <div class="container col-12 p-2">
             <h1>Weather Dashboard</h1>
         </div>
     </header>
     <main>
-        <div class="container">
-            <div class="row">
-                <div class="col-4" id="search-bar">
-
+        <div class="row">
+            <aside class="col-4">
+                <!-- Sidebar -->
+                <h3>Search for a City:</h3>
+                <input type="text" class="form-control" id="user-input">
+                <button id="search-btn" type="button" class="btn btn-primary"><i class="fas fa-search"></i></button>
+                <div id="searchHistory" class="bg-white">
+                    <!-- Search results will append here -->
                 </div>
-                <div class="col-8" id="city-info">
-
-                </div>
-
+            </aside>
+            <div class="col-8">
+                <section id="current-weather">
+                    <!-- Current Weather -->
+                </section>
+                <h3 class="hidden" id="forecast-header">5 Day Forecast:</h3>
+                <article id="five-day-forecast">
+                    <!-- 5 Day Forecast -->
+                </article>
             </div>
         </div>
-
     </main>
-Hello Weather
-</body>
+    <!-- Jquery Imported -->
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'
+        integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'
+        integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous'>
+    </script>
+    <!-- Bootstrap Imported -->
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'
+        integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous'>
+    </script>
+    <!-- FontAwesome Imported -->
+    <script src="https://kit.fontawesome.com/351ab118d3.js" crossorigin="anonymous"></script>
+    <!-- JavaScript file Imported -->
+    <script src="Assets/js/script.js"></script>
+    </body>
 
 </html>
