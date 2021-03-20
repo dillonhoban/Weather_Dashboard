@@ -3,3 +3,11 @@
     color: white;
     text-align: center;
 }
+
+#search-bar {
+    background-color: grey;
+}
+
+.hidden {
+    display: none;
+}
